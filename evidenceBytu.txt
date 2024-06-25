@@ -9,7 +9,7 @@ Najemne se plati na ucet patrici: Matej
 Za tento byt se plati dan z nemovitosti: False
 Vyse dane je: 0
 Smlouva plati do 31/01/2025
-Smlouva plati jeste 228 dni
+Smlouva plati jeste 219 dni
 Martin Novak, Telefon: 777777, Email: novak@gmail.com
 Petra Novakova, Telefon: 888888, Email: novakova@gmail.com
 Julia Novakova, Telefon: 0, Email: 
@@ -26,7 +26,7 @@ Najemne se plati na ucet patrici: Vlado
 Za tento byt se plati dan z nemovitosti: True
 Vyse dane je: 494.1
 Smlouva plati do 12/02/2027
-Smlouva plati jeste 970 dni
+Smlouva plati jeste 961 dni
 Petr Modry, Telefon: 777777, Email: modry@gmail.com
 Jan Cerny, Telefon: 888888, Email: cerny@gmail.com
 
@@ -41,7 +41,7 @@ Najemne se plati na ucet patrici: Frantisek
 Za tento byt se plati dan z nemovitosti: True
 Vyse dane je: 549
 Smlouva plati do 15/10/2025
-Smlouva plati jeste 485 dni
+Smlouva plati jeste 476 dni
 Lenka Hajna, Telefon: 2222222, Email: hajna@gmail.com
 
-Zbyvajici vyse dluhu z hypoteky:756000
+Zbyvajici vyse dluhu z hypoteky:768000

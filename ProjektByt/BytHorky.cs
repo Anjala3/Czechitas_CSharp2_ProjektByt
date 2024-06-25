@@ -5,8 +5,8 @@
 
         public BytHorky() : base("osobni", 45, 15000, "Vlado", 4.5)
         {
-            Najemnici petrModry = new Najemnici("Petr", "Modry", 777777, "modry@gmail.com");
-            Najemnici janCerny = new Najemnici("Jan", "Cerny", 888888, "cerny@gmail.com");
+            Najemnik petrModry = new Najemnik("Petr", "Modry", 777777, "modry@gmail.com");
+            Najemnik janCerny = new Najemnik("Jan", "Cerny", 888888, "cerny@gmail.com");
 
             PridejNajemnika(petrModry);
             PridejNajemnika(janCerny);

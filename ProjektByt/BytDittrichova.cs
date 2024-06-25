@@ -4,7 +4,7 @@
     {
         public BytDittrichova() : base("osobni", 50, 19000, "Frantisek", 4.5)
         {
-            Najemnici lenkaHajna = new Najemnici("Lenka", "Hajna", 2222222, "hajna@gmail.com");
+            Najemnik lenkaHajna = new Najemnik("Lenka", "Hajna", 2222222, "hajna@gmail.com");
 
             PridejNajemnika(lenkaHajna);
         }

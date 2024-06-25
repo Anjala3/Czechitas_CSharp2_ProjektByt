@@ -1,7 +1,7 @@
 ﻿namespace ProjektByt
 {
 
-    internal abstract class Byty : Dane
+    internal abstract class Byt : Dan
     {
         public string Vlastnictvi;
         public static double Rozmer;
@@ -10,10 +10,10 @@
         public string MajitelUctu;
         public static double DanovyKoeficient;
         public DateTime PlatnostSmlouvyDo;
-        public List<Najemnici> NajemniciList { get; set; }
+        public List<Najemnik> NajemniciList { get; set; }
 
 
-        public Byty(string vlastnictvi, double rozmer, int vyseNajmu, string majitelUctu, double danovyKoeficient)
+        public Byt(string vlastnictvi, double rozmer, int vyseNajmu, string majitelUctu, double danovyKoeficient)
 
         {
             Vlastnictvi = vlastnictvi;
@@ -21,13 +21,13 @@
             VyseNajmu = vyseNajmu;
             MajitelUctu = majitelUctu;
             DanovyKoeficient = danovyKoeficient;
-            NajemniciList = new List<Najemnici>();
+            NajemniciList = new List<Najemnik>();
 
             PocetNajemniku = 0;
 
         }
 
-        public void PridejNajemnika(Najemnici najemnik)
+        public void PridejNajemnika(Najemnik najemnik)
         {
             NajemniciList.Add(najemnik);
             PocetNajemniku = NajemniciList.Count;

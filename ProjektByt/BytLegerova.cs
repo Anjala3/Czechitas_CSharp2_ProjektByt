@@ -1,7 +1,7 @@
 ﻿
 namespace ProjektByt
 {
-    internal class BytLegerova : Byty, IHypoteka
+    internal class BytLegerova : Byt, IHypoteka
 
     {
 
@@ -12,9 +12,9 @@ namespace ProjektByt
 
         public BytLegerova() : base("druzstevni", 74, 28000, "Matej", 4.5)
         {
-            Najemnici martinNovak = new Najemnici("Martin", "Novak", 777777, "novak@gmail.com");
-            Najemnici petraNovakova = new Najemnici("Petra", "Novakova", 888888, "novakova@gmail.com");
-            Najemnici diteNovak = new Najemnici("Julia", "Novakova", 0, string.Empty);
+            Najemnik martinNovak = new Najemnik("Martin", "Novak", 777777, "novak@gmail.com");
+            Najemnik petraNovakova = new Najemnik("Petra", "Novakova", 888888, "novakova@gmail.com");
+            Najemnik diteNovak = new Najemnik("Julia", "Novakova", 0, string.Empty);
 
             PridejNajemnika(martinNovak);
             PridejNajemnika(petraNovakova);

@@ -1,6 +1,6 @@
 ﻿namespace ProjektByt
 {
-    internal class Najemnici
+    internal class Najemnik
     {
         public string Jmeno { get; set; }
         public string Prijmeni { get; set; }
@@ -9,7 +9,7 @@
 
 
 
-        public Najemnici(string jmeno, string prijmeni, int telefon, string email)
+        public Najemnik(string jmeno, string prijmeni, int telefon, string email)
         {
             Jmeno = jmeno;
             Prijmeni = prijmeni;
