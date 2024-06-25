@@ -10,7 +10,7 @@
         {
 
             double koeficientPlochy = 1.22;
-            double dan = Byty.DanovyKoeficient * koeficientPlochy * (Byty.Rozmer * 2);
+            double dan = Byt.DanovyKoeficient * koeficientPlochy * (Byt.Rozmer * 2);
             return dan;
         }
 

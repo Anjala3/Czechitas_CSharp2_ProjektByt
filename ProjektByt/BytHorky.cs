@@ -1,6 +1,6 @@
 ﻿namespace ProjektByt
 {
-    internal class BytHorky : Byty
+    internal class BytHorky : Byt
     {
 
         public BytHorky() : base("osobni", 45, 15000, "Vlado", 4.5)

@@ -1,6 +1,6 @@
 ﻿namespace ProjektByt
 {
-    internal class BytDittrichova : Byty, IHypoteka
+    internal class BytDittrichova : Byt, IHypoteka
     {
         public BytDittrichova() : base("osobni", 50, 19000, "Frantisek", 4.5)
         {
