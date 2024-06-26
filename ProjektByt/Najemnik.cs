@@ -1,6 +1,7 @@
 ﻿namespace ProjektByt
 {
-    internal class Najemnik
+    [Serializable]
+    public class Najemnik
     {
         public string Jmeno { get; set; }
         public string Prijmeni { get; set; }
@@ -18,6 +19,7 @@
 
         }
 
+        public Najemnik() { }
 
 
 

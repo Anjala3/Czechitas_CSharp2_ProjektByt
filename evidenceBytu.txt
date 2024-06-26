@@ -1,47 +1,12 @@
-
-Nazev bytu: BytLegerova
-Typ vlastnictvi: druzstevni
-Rozmer bytu: 74 m2
-Obsazenost je True
-Pocet najemniku: 3
-Vyse najemneho: 28000 Kc
-Najemne se plati na ucet patrici: Matej
-Za tento byt se plati dan z nemovitosti: False
-Vyse dane je: 0
-Smlouva plati do 31/01/2025
-Smlouva plati jeste 219 dni
-Martin Novak, Telefon: 777777, Email: novak@gmail.com
-Petra Novakova, Telefon: 888888, Email: novakova@gmail.com
-Julia Novakova, Telefon: 0, Email: 
-
 Zbyvajici vyse dluhu z hypoteky:1020000
-
-Nazev bytu: BytHorky
-Typ vlastnictvi: osobni
-Rozmer bytu: 45 m2
-Obsazenost je True
-Pocet najemniku: 2
-Vyse najemneho: 15000 Kc
-Najemne se plati na ucet patrici: Vlado
-Za tento byt se plati dan z nemovitosti: True
-Vyse dane je: 494.1
-Smlouva plati do 12/02/2027
-Smlouva plati jeste 961 dni
-Petr Modry, Telefon: 777777, Email: modry@gmail.com
-Jan Cerny, Telefon: 888888, Email: cerny@gmail.com
-
-
-Nazev bytu: BytDittrichova
-Typ vlastnictvi: osobni
-Rozmer bytu: 50 m2
-Obsazenost je True
-Pocet najemniku: 1
-Vyse najemneho: 19000 Kc
-Najemne se plati na ucet patrici: Frantisek
-Za tento byt se plati dan z nemovitosti: True
-Vyse dane je: 549
-Smlouva plati do 15/10/2025
-Smlouva plati jeste 476 dni
-Lenka Hajna, Telefon: 2222222, Email: hajna@gmail.com
-
 Zbyvajici vyse dluhu z hypoteky:768000
+Zbyvajici vyse dluhu z hypoteky:1020000
+Zbyvajici vyse dluhu z hypoteky:768000
+Zbyvajici vyse dluhu z hypoteky:1020000
+Zbyvajici vyse dluhu z hypoteky:768000
+Zbyvajici vyse dluhu z hypoteky:1020000
+Zbyvajici vyse dluhu z hypoteky:768000
+Zbyvajici vyse dluhu z hypoteky:768000
+Zbyvajici vyse dluhu z hypoteky:768000
+Zbyvajici vyse dluhu z hypoteky:768000
+Zbyvajici vyse dluhu z hypoteky: 768000

@@ -1,6 +1,7 @@
 ﻿namespace ProjektByt
 {
-    internal class BytDittrichova : Byt, IHypoteka
+    [Serializable]
+    public class BytDittrichova : Byt, IHypoteka
     {
         public BytDittrichova() : base("osobni", 50, 19000, "Frantisek", 4.5)
         {
@@ -34,10 +35,7 @@
         {
             return base.DoKonceSmlouvyZbyva();
         }
-        public override void ZapisDoSOuboru()
-        {
-            base.ZapisDoSOuboru();
-        }
+
 
         int zbyvajiciPocetSplatek;
 
@@ -63,15 +61,10 @@
 
         public void VypisZbyvajiciDluh()
         {
-            //nejdriv na Consoli abych to videla :)
-            Console.WriteLine($"Zbyvajici vyse dluhu z hypoteky:{ZbyvaDoplatit()}");
+            Console.WriteLine($"Zbyvajici vyse dluhu z hypoteky: {ZbyvaDoplatit()}");
 
-            //pak do souboru
-
-            string pridejDoSouboru = $"Zbyvajici vyse dluhu z hypoteky:{ZbyvaDoplatit()}";
-            File.AppendAllText(@"C:\Users\komor\source\repos\Czechitas_CSharp2_ProjektByt\evidenceBytu.txt", pridejDoSouboru);
-            File.AppendAllText(@"C:\Users\komor\source\repos\Czechitas_CSharp2_ProjektByt\evidenceBytu.txt", "\n");
 
         }
     }
+
 }

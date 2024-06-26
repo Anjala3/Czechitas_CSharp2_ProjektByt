@@ -1,15 +1,20 @@
-﻿namespace ProjektByt
-{
+﻿using System.Xml.Serialization;
 
-    internal abstract class Byt : Dan
+namespace ProjektByt
+{
+    [XmlInclude(typeof(BytLegerova))]
+    [XmlInclude(typeof(BytHorky))]
+    [XmlInclude(typeof(BytDittrichova))]
+    [Serializable]
+    public abstract class Byt : Dan
     {
-        public string Vlastnictvi;
-        public static double Rozmer;
-        public int PocetNajemniku;
-        public int VyseNajmu;
-        public string MajitelUctu;
-        public static double DanovyKoeficient;
-        public DateTime PlatnostSmlouvyDo;
+        public string Vlastnictvi { get; set; }
+        public static double Rozmer { get; set; }
+        public int PocetNajemniku { get; set; }
+        public int VyseNajmu { get; set; }
+        public string MajitelUctu { get; set; }
+        public static double DanovyKoeficient { get; set; }
+        public DateTime PlatnostSmlouvyDo { get; set; }
         public List<Najemnik> NajemniciList { get; set; }
 
 
@@ -27,29 +32,17 @@
 
         }
 
+        public Byt() { }
+
+
         public void PridejNajemnika(Najemnik najemnik)
         {
             NajemniciList.Add(najemnik);
             PocetNajemniku = NajemniciList.Count;
         }
-        public virtual bool JeObsazen()
-        {
-            if (PocetNajemniku > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        public virtual bool JeObsazen() => PocetNajemniku > 0;
 
-        public virtual bool PlatiSeDan()
-        {
-            if (Vlastnictvi == "osobni")
-            { return true; }
-            else { return false; }
-        }
+        public virtual bool PlatiSeDan() => Vlastnictvi == "osobni";
 
         public virtual int DoKonceSmlouvyZbyva()
         {
@@ -57,61 +50,7 @@
             TimeSpan zbyvajiciCas = PlatnostSmlouvyDo - now;
             return (int)zbyvajiciCas.TotalDays;
         }
-        public virtual bool PlatiSmlouva() //mozna je to navic?
-        {
-            if (PlatnostSmlouvyDo <= DateTime.Today)
-            {
-                return true;
-            }
-            else
-            { return false; }
-        }
-
-
-        public virtual void ZapisDoSOuboru()
-        {
-            // abych videla co zapisuji
-            Console.WriteLine($"Nazev bytu: {this.GetType().Name}");
-            Console.WriteLine($"Typ vlastnictvi: {Vlastnictvi}");
-            Console.WriteLine($"Rozmer bytu: {Rozmer} m2");
-            Console.WriteLine($"Obsazenost je {JeObsazen()}.");
-            Console.WriteLine($"Pocet najemniku: {PocetNajemniku}.");
-            VypisNajemnika();
-            Console.WriteLine($"Vyse najemneho: {VyseNajmu} Kc");
-            Console.WriteLine($"Najemne se plati na ucet patrici: {MajitelUctu}");
-            Console.WriteLine($"Za tento byt se plati dan z nemovitosti: {PlatiSeDan()}");
-            Console.WriteLine($"Vyse dane je: {VypoctiDan()}");
-            Console.WriteLine($"Smlouva plati do {PlatnostSmlouvyDo.ToShortDateString()}");
-            Console.WriteLine($"Smlouva plati jeste {DoKonceSmlouvyZbyva()} dni.");
-
-
-
-            //ted uz samotny zapis do souboru
-
-
-            List<string> najmeniciDoSouboru = new List<string>();
-            string cestaKSouboru = @"C:\Users\komor\source\repos\Czechitas_CSharp2_ProjektByt\evidenceBytu.txt";
-            string[] poleTextu = {$"Nazev bytu: {this.GetType().Name}", $"Typ vlastnictvi: {Vlastnictvi}", $"Rozmer bytu: {Rozmer} m2",
-                $"Obsazenost je {JeObsazen()}", $"Pocet najemniku: {PocetNajemniku}", $"Vyse najemneho: {VyseNajmu} Kc",
-                $"Najemne se plati na ucet patrici: {MajitelUctu}", $"Za tento byt se plati dan z nemovitosti: {PlatiSeDan()}",
-                $"Vyse dane je: {VypoctiDan()}",
-                $"Smlouva plati do {PlatnostSmlouvyDo.ToShortDateString()}", $"Smlouva plati jeste {DoKonceSmlouvyZbyva()} dni",
-
-               };
-
-            File.AppendAllText(cestaKSouboru, "\n");
-            File.AppendAllLines(cestaKSouboru, poleTextu);
-
-            foreach (var najemnik in NajemniciList)
-            {
-                najmeniciDoSouboru.Add($"{najemnik.Jmeno} {najemnik.Prijmeni}, Telefon: {najemnik.Telefon}, Email: {najemnik.Email}");
-            }
-
-
-            File.AppendAllLines(cestaKSouboru, najmeniciDoSouboru);
-            File.AppendAllText(cestaKSouboru, "\n");
-
-        }
+        public virtual bool PlatiSmlouva() => PlatnostSmlouvyDo > DateTime.Today;
 
 
         public override double VypoctiDan()

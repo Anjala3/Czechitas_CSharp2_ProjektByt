@@ -1,7 +1,7 @@
-﻿
-namespace ProjektByt
+﻿namespace ProjektByt
 {
-    internal class BytLegerova : Byt, IHypoteka
+    [Serializable]
+    public class BytLegerova : Byt, IHypoteka
 
     {
 
@@ -22,30 +22,12 @@ namespace ProjektByt
         }
 
 
-        public override bool JeObsazen()
-        {
-            return base.JeObsazen();
-        }
 
-        public override bool PlatiSeDan()
-        {
-            return base.PlatiSeDan();
 
-        }
-
-        public override bool PlatiSmlouva()
-        {
-            return base.PlatiSmlouva();
-        }
-
-        public override int DoKonceSmlouvyZbyva()
-        {
-            return base.DoKonceSmlouvyZbyva();
-        }
-        public override void ZapisDoSOuboru()
-        {
-            base.ZapisDoSOuboru();
-        }
+        public override bool JeObsazen() => base.JeObsazen();
+        public override bool PlatiSeDan() => base.PlatiSeDan();
+        public override bool PlatiSmlouva() => base.PlatiSmlouva();
+        public override int DoKonceSmlouvyZbyva() => base.DoKonceSmlouvyZbyva();
 
         int zbyvajiciPocetSplatek;
 
@@ -71,15 +53,7 @@ namespace ProjektByt
 
         public void VypisZbyvajiciDluh()
         {
-            //nejdriv na Consoli abych to videla :)
-            Console.WriteLine($"Zbyvajici vyse dluhu z hypoteky:{ZbyvaDoplatit()}");
-
-            //pak do souboru
-
-            string pridejDoSouboru = $"Zbyvajici vyse dluhu z hypoteky:{ZbyvaDoplatit()}";
-            File.AppendAllText(@"C:\Users\komor\source\repos\Czechitas_CSharp2_ProjektByt\evidenceBytu.txt", pridejDoSouboru);
-            File.AppendAllText(@"C:\Users\komor\source\repos\Czechitas_CSharp2_ProjektByt\evidenceBytu.txt", "\n");
-
+            Console.WriteLine($"Zbyvajici vyse dluhu z hypoteky: {ZbyvaDoplatit()}");
         }
     }
 

@@ -1,6 +1,7 @@
 ﻿namespace ProjektByt
 {
-    internal class BytHorky : Byt
+    [Serializable]
+    public class BytHorky : Byt
     {
 
         public BytHorky() : base("osobni", 45, 15000, "Vlado", 4.5)
@@ -12,30 +13,11 @@
             PridejNajemnika(janCerny);
         }
 
-        public override bool JeObsazen()
-        {
-            return base.JeObsazen();
-        }
-
-        public override bool PlatiSeDan()
-        {
-            return base.PlatiSeDan();
-
-        }
-
-        public override bool PlatiSmlouva()
-        {
-            return base.PlatiSmlouva();
-        }
-
-        public override int DoKonceSmlouvyZbyva()
-        {
-            return base.DoKonceSmlouvyZbyva();
-        }
-        public override void ZapisDoSOuboru()
-        {
-            base.ZapisDoSOuboru();
-        }
-
+        public override bool JeObsazen() => base.JeObsazen();
+        public override bool PlatiSeDan() => base.PlatiSeDan();
+        public override bool PlatiSmlouva() => base.PlatiSmlouva();
+        public override int DoKonceSmlouvyZbyva() => base.DoKonceSmlouvyZbyva();
     }
+
 }
+
